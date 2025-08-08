@@ -40,10 +40,10 @@ pipeline/
 ├── docker-compose.yml         # Docker Compose configuration for Airflow and PostgreSQL
 ├── .env                       # Environment variables for credentials and defaults
 ├── README.md                  # This README file
-├── init-scripts/              # Initialization SQL scripts for PostgreSQL
-│   └── 01_init_stocks.sql     # Creates stocks DB and stock_prices table
+├── db_script/                 # Initialization SQL scripts for PostgreSQL
+│   └── db_init.sql            # Creates stocks DB and stock_prices table
 └── airflow/
-    └── dags/
+    └── dag/
         ├── dag_pipeline.py    # Main Airflow DAG definition
         └── fetch.py           # Python functions for fetching and storing data
 ```
@@ -103,7 +103,7 @@ SYMBOL=AAPL                   # Default stock symbol to fetch
 1. **Clone the repository**
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/startope9/assignment_8byte
    cd pipeline
    ```
 
@@ -157,7 +157,7 @@ SELECT * FROM stock_prices LIMIT 5;
 
 * **URL:** `http://localhost:8080`
 * **Login:** `admin` / `admin`
-* **DAG Folder:** `/opt/airflow/dags`
+* **DAG Folder:** `/opt/airflow/dag`
 
 ---
 

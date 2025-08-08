@@ -24,10 +24,10 @@ services:
       AIRFLOW__CORE__FERNET_KEY: ''
       AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dag
       ALPHAVANTAGE_API_KEY: ${ALPHAVANTAGE_API_KEY}
     volumes:
-      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/dag:/opt/airflow/dag
 
     ports:
       - "8080:8080"
