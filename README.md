@@ -104,7 +104,7 @@ SYMBOL=AAPL                   # Default stock symbol to fetch
 
    ```bash
    git clone https://github.com/startope9/assignment_8byte
-   cd pipeline
+   cd assignment_8byte
    ```
 
 2. **Bring up containers**
