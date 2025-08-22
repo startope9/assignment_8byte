@@ -4,23 +4,6 @@ A lightweight ETL pipeline to fetch daily stock market data from Alpha Vantage a
 
 ---
 
-## Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Repository Structure](#repository-structure)
-3. [Prerequisites](#prerequisites)
-4. [Environment Variables](#environment-variables)
-5. [Setup & Installation](#setup--installation)
-6. [Usage](#usage)
-7. [Database Initialization & Verification](#database-initialization--verification)
-8. [Accessing the Airflow UI](#accessing-the-airflow-ui)
-9. [Project Details](#project-details)
-10. [Testing](#testing)
-11. [Future Improvements](#future-improvements)
-12. [License](#license)
-
----
-
 ## Project Overview
 
 This project implements a daily ETL (Extract, Transform, Load) pipeline that:
@@ -36,7 +19,7 @@ This project implements a daily ETL (Extract, Transform, Load) pipeline that:
 ## Repository Structure
 
 ```
-pipeline/
+assignment_8byte/
 ├── docker-compose.yml         # Docker Compose configuration for Airflow and PostgreSQL
 ├── .env                       # Environment variables for credentials and defaults
 ├── README.md                  # This README file

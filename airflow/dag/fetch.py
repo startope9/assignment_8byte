@@ -15,9 +15,9 @@ DEFAULT_SYMBOL = os.getenv("SYMBOL", "AAPL")
 def fetch_data(symbol=DEFAULT_SYMBOL):
     try:
         url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={API_KEY}"
-        response = requests.get(url, timeout=15)
-        response.raise_for_status()
-        data = response.json()
+        res = requests.get(url, timeout=15)
+        res.raise_for_status()
+        data = res.json()
 
         if "Time Series (Daily)" not in data:
             raise ValueError(f"Unexpected API response: {dict((k, data.get(k)) for k in data.keys())}")

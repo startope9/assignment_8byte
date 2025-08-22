@@ -11,17 +11,17 @@ default_args = {
 }
 
 with DAG(
-    dag_id='stock_market_pipeline',
+    dag_id='pipeline',
     default_args=default_args,
-    description='Fetch and store stock market data (Alpha Vantage -> Postgres)',
+    description='fetch market data',
     schedule_interval='@daily', 
     start_date=datetime(2025, 1, 1),
     catchup=False
 ) as dag:
 
-    task_fetch_and_store = PythonOperator(
-        task_id='fetch_and_store_stock_data',
+    fetch = PythonOperator(
+        task_id='fetch',
         python_callable=fetch_and_store
     )
 
-    task_fetch_and_store
+    fetch
